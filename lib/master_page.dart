@@ -2,6 +2,9 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_qr_code/QRWidget.dart';
 import 'package:flutter_qr_code/home_widget.dart';
+import 'package:flutter_qr_code/notification_widget.dart';
+import 'package:flutter_qr_code/payment_widget.dart';
+import 'package:flutter_qr_code/profile_widget.dart';
 
 
 class  MasterPage extends StatefulWidget {
@@ -13,7 +16,7 @@ class  MasterPage extends StatefulWidget {
 
 class _MasterPageState extends State< MasterPage> {
   int _page = 0;
-  final screens = [HomeWidget(), QRWidget()];
+  final screens = [HomeWidget(), PaymentWidget(), QRWidget(), NotifyWidget(), ProfileWidget()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
