@@ -1,4 +1,4 @@
-name: flutter_qr_code
+name: flutterQRCode
 description: "A new Flutter project."
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -14,8 +14,14 @@ dependencies:
 
   qr_flutter: ^4.1.0
 
+  firebase_core: any
+
+  firebase_auth: any
+
+  cloud_firestore: any
+
   flutter_bloc: ^8.1.1
-  
+
   persistent_bottom_nav_bar: ^6.2.1
 
   cupertino_icons: ^1.0.8

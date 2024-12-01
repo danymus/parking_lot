@@ -1,6 +1,6 @@
 {
-    "name": "flutter_qr_code",
-    "short_name": "flutter_qr_code",
+    "name": "flutterQRCode",
+    "short_name": "flutterQRCode",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

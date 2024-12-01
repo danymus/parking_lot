@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "flutter_qr_code" "\0"
+            VALUE "CompanyName", "com.parkingLot" "\0"
+            VALUE "FileDescription", "flutterQRCode" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "flutter_qr_code" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "flutter_qr_code.exe" "\0"
-            VALUE "ProductName", "flutter_qr_code" "\0"
+            VALUE "InternalName", "flutterQRCode" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 com.parkingLot. All rights reserved." "\0"
+            VALUE "OriginalFilename", "flutterQRCode.exe" "\0"
+            VALUE "ProductName", "flutterQRCode" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

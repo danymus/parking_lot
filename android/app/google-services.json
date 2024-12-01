@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "951855993662",
+    "project_id": "parking-fc7fa",
+    "storage_bucket": "parking-fc7fa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951855993662:android:c35a770c36ebababc2126f",
+        "android_client_info": {
+          "package_name": "com.parkingLot.flutterQRCode"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoungjIAZQ0wytCQ4xFinaSV2W_8KY_UQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951855993662:android:8c0e27f9f7041863c2126f",
+        "android_client_info": {
+          "package_name": "com.parking_lot.flutter_qr_code"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoungjIAZQ0wytCQ4xFinaSV2W_8KY_UQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

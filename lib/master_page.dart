@@ -1,14 +1,17 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_qr_code/QRWidget.dart';
-import 'package:flutter_qr_code/home_widget.dart';
-import 'package:flutter_qr_code/notification_widget.dart';
-import 'package:flutter_qr_code/payment_widget.dart';
-import 'package:flutter_qr_code/profile_widget.dart';
-
+import 'package:flutterQRCode/QRWidget.dart';
+import 'package:flutterQRCode/home_widget.dart';
+import 'package:flutterQRCode/notification_widget.dart';
+import 'package:flutterQRCode/payment_widget.dart';
+import 'package:flutterQRCode/profile_widget.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class  MasterPage extends StatefulWidget {
-  const  MasterPage({super.key});
+  final User user;
+  MasterPage({required this.user});
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   @override
   State< MasterPage> createState() => _MasterPageState();
@@ -17,6 +20,7 @@ class  MasterPage extends StatefulWidget {
 class _MasterPageState extends State< MasterPage> {
   int _page = 0;
   final screens = [HomeWidget(), PaymentWidget(), QRWidget(), NotifyWidget(), ProfileWidget()];
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,6 +39,7 @@ class _MasterPageState extends State< MasterPage> {
         onTap: (index) {
           setState(() {
             _page = index;
+            
           });
         },
       ),
