@@ -13,19 +13,38 @@ class _LoginWjdgetState extends State<LoginWidget>  {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final TextControllers = [TextEditingController(), TextEditingController()];
 
-  // Directs the user to log in with their email and password.
-  Future<void> _signInWithEmailAndPassword(String email, String password) async {
+  Future<void> signIn(String email, String password) async {
     try {
       await _auth.signInWithEmailAndPassword(email: email, password: password);
     } catch (e) {
       print('Login Error: $e');
     }
   }
-   Future<void> _createUserWithEmailAndPassword(String email, String password) async {
+   Future<void> createUser(String email, String password) async {
     try {
       await _auth.createUserWithEmailAndPassword(email: email, password: password);
     } catch (e) {
-      print('Register Error: $e');
+      showDialog<void>(context: context,barrierDismissible: false,builder: (BuildContext context) {return AlertDialog(
+        title: const Text('AlertDialog'),
+        content: const SingleChildScrollView(
+          child: ListBody(
+            children: <Widget>[
+              Text("gey"),
+              Text('Would you like to approve of this message?'),
+            ],
+          ),
+        ),
+        actions: <Widget>[
+          TextButton(
+            child: const Text('Approve'),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ],
+      );
+    },
+  );;
     }
   }
   @override
@@ -53,11 +72,11 @@ class _LoginWjdgetState extends State<LoginWidget>  {
               onPressed: () {
                 if(isLogin)
                 {
-                  _signInWithEmailAndPassword(TextControllers[0].text, TextControllers[1].text);
+                  signIn(TextControllers[0].text, TextControllers[1].text);
                 }
                 else
                 {
-                  _createUserWithEmailAndPassword(TextControllers[0].text, TextControllers[1].text);
+                  createUser(TextControllers[0].text, TextControllers[1].text);
                 }
               },
               child: Text(isLogin? 'Login' : 'Sign Up'),
